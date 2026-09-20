@@ -15,8 +15,16 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    <Grid Background="{DynamicResource ResourceKey=PrimaryBackground}" ColumnDefinitions="200, *">
+        <Border Grid.Column="0" Padding="20" Background="Red">
+            <Grid Background="Orange" RowDefinitions="*, Auto">
+                <StackPanel Grid.Row="0">
+                    <Svg Path="/Assets/Images/Nvidia-Logo.wine.svg" Width="200" Height="100" Stretch="Uniform">
+                    </Svg>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
 
 </Window>
